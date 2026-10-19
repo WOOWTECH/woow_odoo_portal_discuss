@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="portal_discuss_channels" name="My Discussions">
+<t t-call="portal.portal_layout">
+<t t-set="breadcrumbs_searchbar" t-value="1"/>
+<t t-call="portal.portal_searchbar"><t t-set="title">Discussions</t></t>
+<div class="o_portal_discussions"><t t-if="not channels"><div class="alert alert-info">No discussion channels.</div></t></div>
+</t>
+</template>
+</odoo>
