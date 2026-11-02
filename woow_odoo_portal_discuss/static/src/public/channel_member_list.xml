@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- member panel: "Invite a User" for internal users only (see invite_patch.js) -->
+    <t t-name="woow_odoo_portal_discuss.ChannelMemberList" t-inherit="discuss.ChannelMemberList" t-inherit-mode="extension">
+        <xpath expr="//button[contains(@t-on-click, 'openChannelInvitePanel')]" position="attributes">
+            <attribute name="t-if">portalDiscussCanInvite</attribute>
+        </xpath>
+    </t>
+</templates>

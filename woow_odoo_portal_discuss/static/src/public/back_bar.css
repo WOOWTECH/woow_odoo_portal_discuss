@@ -1,0 +1,104 @@
+/* Back bar of the Discuss page opened from /my/discussions (?discussions=1):
+   a 44px (40px on phones) bar above the Discuss app, which gets the rest of
+   the height instead of Odoo's absolute full-page container. */
+
+/* --- Make body a flex column so bar + OWL stack vertically --- */
+html.o_portal_discuss_has_back_bar,
+html.o_portal_discuss_has_back_bar body {
+    height: 100% !important;
+    margin: 0 !important;
+}
+
+html.o_portal_discuss_has_back_bar body {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Override Odoo's absolute positioning on OWL container.
+   Odoo sets: position: absolute; height: 100%; width: 100%
+   in mail/static/src/discuss/core/public/main_components_container.scss.
+   We change to relative + calc height to account for the back bar. */
+html.o_portal_discuss_has_back_bar body > .o-main-components-container {
+    position: relative !important;
+    height: calc(100% - 44px) !important;
+    width: 100% !important;
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Override Odoo's ChatWindow fixed-bottom overlay on mobile.
+   .o-mail-ChatWindow uses position:fixed; top:0; height:100% via
+   Bootstrap's fixed-bottom class. Push it below the back bar. */
+html.o_portal_discuss_has_back_bar .o-mail-ChatWindow.fixed-bottom {
+    top: 44px !important;
+    height: calc(100% - 44px) !important;
+}
+
+/* --- The back bar itself --- */
+#o_portal_discuss_back_bar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding: 0 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    z-index: 1060;
+    position: relative;
+}
+
+#o_portal_discuss_back_bar a {
+    color: #495057;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.15s ease;
+}
+
+#o_portal_discuss_back_bar a:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+    text-decoration: none;
+}
+
+#o_portal_discuss_back_bar a:active {
+    background-color: #e9ecef;
+}
+
+#o_portal_discuss_back_bar .oi {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* --- Mobile: slightly smaller bar --- */
+@media (max-width: 767.98px) {
+    #o_portal_discuss_back_bar {
+        height: 40px;
+        padding: 0 12px;
+    }
+
+    html.o_portal_discuss_has_back_bar body > .o-main-components-container {
+        height: calc(100% - 40px) !important;
+    }
+
+    html.o_portal_discuss_has_back_bar .o-mail-ChatWindow.fixed-bottom {
+        top: 40px !important;
+        height: calc(100% - 40px) !important;
+    }
+
+    #o_portal_discuss_back_bar a {
+        font-size: 13px;
+        padding: 5px 8px;
+        gap: 4px;
+    }
+
+    #o_portal_discuss_back_bar .oi {
+        font-size: 13px;
+    }
+}

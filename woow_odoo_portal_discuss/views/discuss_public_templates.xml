@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Discuss page opened from /my/discussions (?discussions=1): a back bar
+         above the conversation, rendered on the server (no inline script);
+         values from controllers/discuss_public.py -->
+    <template id="discuss_public_back_bar" name="Portal Discussions: back bar"
+              inherit_id="mail.discuss_public_channel_template" priority="20">
+        <xpath expr="//html" position="attributes">
+            <attribute name="t-att-class">'h-100 o_portal_discuss_has_back_bar' if portal_discuss_back_url else 'h-100'</attribute>
+        </xpath>
+        <xpath expr="//body/t[@t-out]" position="before">
+            <nav t-if="portal_discuss_back_url" id="o_portal_discuss_back_bar">
+                <a id="o_portal_discuss_back_link" t-att-href="portal_discuss_back_url">
+                    <i class="oi oi-arrow-left" role="img" aria-hidden="true"/>
+                    <span t-out="portal_discuss_back_label"/>
+                </a>
+            </nav>
+        </xpath>
+    </template>
+</odoo>

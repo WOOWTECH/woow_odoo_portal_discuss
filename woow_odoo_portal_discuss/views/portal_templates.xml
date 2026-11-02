@@ -1,10 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<template id="portal_discuss_channels" name="My Discussions">
-<t t-call="portal.portal_layout">
-<t t-set="breadcrumbs_searchbar" t-value="1"/>
-<t t-call="portal.portal_searchbar"><t t-set="title">Discussions</t></t>
-<div class="o_portal_discussions"><t t-if="not channels"><div class="alert alert-info">No discussion channels.</div></t></div>
-</t>
-</template>
+    <!-- Portal home: "Discussions" card -->
+    <template id="portal_my_home_discussions" name="Portal Home: Discussions" customize_show="True"
+              inherit_id="portal.portal_my_home" priority="20">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="before">
+            <t t-set="portal_service_category_enable" t-value="True"/>
+        </xpath>
+        <div id="portal_service_category" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="icon" t-value="'/woow_odoo_portal_discuss/static/src/img/discussions.svg'"/>
+                <t t-set="title">Discussions</t>
+                <t t-set="url" t-value="'/my/discussions'"/>
+                <t t-set="text">Chat, collaborate, and review shared discussions</t>
+                <t t-set="config_card" t-value="True"/>
+            </t>
+        </div>
+    </template>
+
+    <template id="portal_breadcrumbs_discussions" name="Portal Breadcrumbs: Discussions"
+              inherit_id="portal.portal_breadcrumbs" priority="20">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'discussions'" class="breadcrumb-item active">Discussions</li>
+        </xpath>
+    </template>
+
+    <!-- /my/discussions -->
+    <template id="portal_discuss_channels" name="My Discussions">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Your Discussions</t>
+            </t>
+
+            <!-- one tab per kind of conversation (?filterby=); other modules
+                 add tabs through _portal_discussion_filters() -->
+            <ul t-if="discussion_tabs" class="nav nav-pills flex-nowrap overflow-auto gap-1 mt-3 pb-1 o_portal_discussion_tabs">
+                <li t-foreach="discussion_tabs" t-as="tab" class="nav-item flex-shrink-0">
+                    <a t-att-href="tab['url']"
+                       t-attf-class="nav-link text-nowrap #{'active' if tab['key'] == filterby else 'bg-light text-body'} o_portal_discussion_tab"
+                       t-att-data-tab="tab['key']"
+                       t-att-aria-current="'page' if tab['key'] == filterby else None">
+                        <t t-out="tab['label']"/>
+                        <span t-if="tab['unread']"
+                              t-attf-class="badge rounded-pill ms-1 #{'text-bg-light' if tab['key'] == filterby else 'text-bg-primary'} o_portal_discussion_tab_unread"
+                              t-out="tab['unread']"/>
+                    </a>
+                </li>
+            </ul>
+
+            <div t-if="not channels" class="alert alert-light border mt-3 o_portal_discussions_empty" role="status">
+                You have no conversation here yet.
+            </div>
+
+            <div t-if="discussion_rows" class="list-group mt-3 o_portal_discussions">
+                <a t-foreach="discussion_rows" t-as="row" t-att-href="row['url']"
+                   class="list-group-item list-group-item-action d-flex align-items-center gap-3 py-2 o_portal_discussion">
+                    <img t-att-src="row['avatar_url']" t-att-alt="row['title']" width="40" height="40"
+                         class="rounded-circle flex-shrink-0 object-fit-cover"/>
+                    <div class="flex-grow-1 min-w-0">
+                        <div class="d-flex align-items-baseline gap-2">
+                            <span t-attf-class="text-truncate #{'fw-bold' if row['unread'] else 'fw-semibold'} o_portal_discussion_title"
+                                  t-out="row['title']"/>
+                            <span class="badge rounded-pill text-bg-light border flex-shrink-0 o_portal_discussion_type"
+                                  t-out="row['type_label']"/>
+                            <small t-if="row['last_date']" class="text-muted ms-auto flex-shrink-0 text-nowrap o_portal_discussion_date"
+                                   t-out="row['last_date']" t-options="{'widget': 'datetime', 'format': 'short'}"/>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <small t-attf-class="text-truncate #{'text-body' if row['unread'] else 'text-muted'} o_portal_discussion_preview"
+                                   t-out="row['preview'] or ''"/>
+                            <span t-if="row['unread']"
+                                  class="badge rounded-pill text-bg-primary ms-auto flex-shrink-0 o_portal_discussion_unread"
+                                  t-out="row['unread']"/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </t>
+    </template>
 </odoo>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Discussions">
+  <path d="M14 18h44a8 8 0 0 1 8 8v24a8 8 0 0 1-8 8H32l-12 10v-10h-6a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#cfe3fb" stroke="#3b6fb6" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M42 40h40a8 8 0 0 1 8 8v20a8 8 0 0 1-8 8h-4v10l-12-10H42a8 8 0 0 1-8-8V48a8 8 0 0 1 8-8z" fill="#ffffff" stroke="#3b6fb6" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="50" cy="58" r="3.5" fill="#3b6fb6"/>
+  <circle cx="62" cy="58" r="3.5" fill="#3b6fb6"/>
+  <circle cx="74" cy="58" r="3.5" fill="#3b6fb6"/>
+  <path d="M18 30h32M18 40h22" stroke="#3b6fb6" stroke-width="3" stroke-linecap="round"/>
+</svg>

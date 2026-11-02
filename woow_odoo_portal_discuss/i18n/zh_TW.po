@@ -1,0 +1,104 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* woow_odoo_portal_discuss
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250807\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-02 06:05+0000\n"
+"PO-Revision-Date: 2026-11-02 06:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "All"
+msgstr "全部"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "Attachment"
+msgstr "附件"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/discuss_public.py:0
+msgid "Back"
+msgstr "返回"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/discuss_public.py:0
+msgid "Back to Discussions"
+msgstr "返回討論區"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "Channel"
+msgstr "頻道"
+
+#. module: woow_odoo_portal_discuss
+#: model_terms:ir.ui.view,arch_db:woow_odoo_portal_discuss.portal_my_home_discussions
+msgid "Chat, collaborate, and review shared discussions"
+msgstr "聊天、協作並查看共享的討論"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "Direct Message"
+msgstr "私訊"
+
+#. module: woow_odoo_portal_discuss
+#: model_terms:ir.ui.view,arch_db:woow_odoo_portal_discuss.portal_breadcrumbs_discussions
+#: model_terms:ir.ui.view,arch_db:woow_odoo_portal_discuss.portal_my_home_discussions
+msgid "Discussions"
+msgstr "討論區"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "Group"
+msgstr "群組"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "Last Activity"
+msgstr "最近活動"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "Name"
+msgstr "名稱"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "Search in All"
+msgstr "搜尋全部"
+
+#. module: woow_odoo_portal_discuss
+#: model_terms:ir.ui.view,arch_db:woow_odoo_portal_discuss.portal_discuss_channels
+msgid "You have no conversation here yet."
+msgstr "這裡還沒有對話。"
+
+#. module: woow_odoo_portal_discuss
+#. odoo-python
+#: code:addons/woow_odoo_portal_discuss/controllers/portal.py:0
+msgid "You: %s"
+msgstr "您：%s"
+
+#. module: woow_odoo_portal_discuss
+#: model_terms:ir.ui.view,arch_db:woow_odoo_portal_discuss.portal_discuss_channels
+msgid "Your Discussions"
+msgstr "您的討論"
