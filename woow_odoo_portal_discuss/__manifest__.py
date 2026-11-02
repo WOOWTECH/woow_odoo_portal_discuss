@@ -28,7 +28,7 @@ Odoo 18 already lets portal users chat on the Discuss page
 Replaces cs_portal_discuss (both cannot be installed together).
     """,
     'author': 'WOOWTECH',
-    'website': 'https://github.com/WOOWTECH/Woow_odoo_portal_discuss',
+    'website': 'https://github.com/WOOWTECH/woow_odoo_portal_discuss',
     'license': 'LGPL-3',
     'depends': ['portal', 'mail'],
     'excludes': ['cs_portal_discuss'],

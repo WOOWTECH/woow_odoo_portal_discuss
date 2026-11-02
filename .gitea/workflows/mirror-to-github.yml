@@ -1,4 +1,4 @@
-# Push Gitea main and tags to the GitHub mirror WOOWTECH/Woow_odoo_portal_discuss.
+# Push Gitea main and tags to the GitHub mirror WOOWTECH/woow_odoo_portal_discuss.
 #
 # Gitea (git-prod.woowtech.io) is the source of truth; GitHub only receives
 # what lands here. Send changes as Gitea PRs; do not commit to GitHub directly.
@@ -36,7 +36,7 @@ jobs:
       - name: Push main and tags to GitHub
         env:
           SSH_KEY: ${{ secrets.GH_MIRROR_SSH_KEY }}
-          GITHUB_MIRROR: git@github.com:WOOWTECH/Woow_odoo_portal_discuss.git
+          GITHUB_MIRROR: git@github.com:WOOWTECH/woow_odoo_portal_discuss.git
           # GitHub's published ed25519 host key (SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU),
           # pinned rather than ssh-keyscan, which trusts whatever host answers.
           GITHUB_HOST_KEY: github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl
