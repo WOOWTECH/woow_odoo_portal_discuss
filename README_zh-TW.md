@@ -59,4 +59,4 @@ Odoo 18 原生就讓 portal 用戶在 `/discuss/channel/<id>` 聊天（訊息、
 
 ## 授權
 
-LGPL-3。WOOWTECH 自行撰寫，取代先前以 Code Sparks 為基礎的 `cs_portal_discuss`（沒有沿用它的程式碼）。
+LGPL-3。本模組改自 Code Sparks 的 `cs_portal_discuss`（https://code-sparks.odoo.com，LGPL-3），WOOWTECH 改寫了大部分內容；來源與修改紀錄見 `woow_odoo_portal_discuss/NOTICE`。
