@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# Portions derived from cs_portal_discuss by Code Sparks (https://code-sparks.odoo.com), LGPL-3.
+# Modified by WOOWTECH, 2026. See NOTICE.
 from urllib.parse import quote, urlencode
 
 from odoo import http, _

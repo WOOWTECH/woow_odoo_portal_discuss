@@ -1,4 +1,6 @@
 /** @odoo-module */
+// Portions derived from cs_portal_discuss by Code Sparks (https://code-sparks.odoo.com), LGPL-3.
+// Modified by WOOWTECH, 2026. See NOTICE.
 // Opened from the portal list (/discuss/channel/<id>?discussions=1): show the
 // conversation at once, without the guest welcome page and without starting
 // the full-screen video view. Every access is optional: if these Discuss

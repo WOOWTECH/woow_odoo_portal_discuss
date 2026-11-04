@@ -1,4 +1,6 @@
 /** @odoo-module */
+// Portions derived from cs_portal_discuss by Code Sparks (https://code-sparks.odoo.com), LGPL-3.
+// Modified by WOOWTECH, 2026. See NOTICE.
 // Portal users do not invite people: Odoo refuses it on the server (no write
 // access on the conversation) and the invite search only lists employees, so
 // the "Invite" header action and the member panel button only lead to errors.

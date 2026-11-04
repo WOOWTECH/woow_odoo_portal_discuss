@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Portal Discussions',
-    'version': '18.0.2.0.0',
+    'version': '18.0.2.0.1',
     'category': 'Productivity/Discuss',
     'summary': 'Portal users list and open their Discuss conversations from /my/discussions',
     'description': """
@@ -27,7 +27,7 @@ Odoo 18 already lets portal users chat on the Discuss page
 
 Replaces cs_portal_discuss (both cannot be installed together).
     """,
-    'author': 'WOOWTECH',
+    'author': 'WOOWTECH, Code Sparks',
     'website': 'https://github.com/WOOWTECH/woow_odoo_portal_discuss',
     'license': 'LGPL-3',
     'depends': ['portal', 'mail'],

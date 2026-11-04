@@ -1,0 +1,19 @@
+woow_odoo_portal_discuss
+Copyright (C) 2026 WOOWTECH
+
+This module is a modified version of "Portal Discuss, Chat & Meetings Hub"
+(technical name cs_portal_discuss, version 18.0.0.0), developed by Code Sparks
+(https://code-sparks.odoo.com) and licensed under the GNU Lesser General Public
+License version 3 (LGPL-3).
+
+Modifications by WOOWTECH:
+- 2026-03-31 to 2026-05-30: Traditional Chinese translations, a back bar on the
+  Discuss page, ordering of the portal home card.
+- 2026-11-02 (18.0.1.0.0, 18.0.1.1.0): rewrite of the portal discussion list
+  (tabs, unread counts, search, signed avatars, extension hooks).
+- 2026-11-02 (18.0.2.0.0): renamed to woow_odoo_portal_discuss; replaces
+  cs_portal_discuss (both cannot be installed together).
+- 2026-11-04 (18.0.2.0.1): this notice and the attribution headers restored.
+
+The modified module is distributed under LGPL-3; see LICENSE (LGPL-3) and
+COPYING (GPL-3) at the repository root.

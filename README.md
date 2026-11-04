@@ -102,5 +102,6 @@ invitations on the server).
 
 ## License
 
-LGPL-3. Written by WOOWTECH; replaces the earlier Code Sparks based
-`cs_portal_discuss` (no code of it is reused).
+LGPL-3. This module is a modified version of `cs_portal_discuss` by Code Sparks
+(https://code-sparks.odoo.com), licensed under LGPL-3. WOOWTECH rewrote most of it;
+see `woow_odoo_portal_discuss/NOTICE` for the origin and the changes.
